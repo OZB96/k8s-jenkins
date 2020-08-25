@@ -5,7 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: jenkins
-  namespace: kube-system
+  namespace: jenkins
 roleRef:
   kind: ClusterRole
   name: cluster-admin

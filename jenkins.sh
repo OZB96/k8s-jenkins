@@ -4,6 +4,7 @@ source <(k3d completion bash)
 source <(kubectl completion bash)
 kubectl apply -f jenkins.namespace.yaml
 kubectl apply -f jenkins.helm.yaml
+kubectl apply -f clusterRole.yaml
 WAIT=60
 echo "Sleeping for $WAIT"
 sleep $WAIT

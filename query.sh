@@ -3,6 +3,7 @@ POD=$(kubectl get pods -n jenkins -o json | jq '.items[1].metadata.name' | xargs
 echo "Jenkins credentials"
 while [[ "$(kubectl -n jenkins --container jenkins exec $POD -- env | grep ADMIN_USER | sed 's/.*=//')" == "" ]] ; do
 sleep 2;
+POD=$(kubectl get pods -n jenkins -o json | jq '.items[1].metadata.name' | xargs)
 done
 
 echo username: $(kubectl -n jenkins --container jenkins exec $POD -- env | grep ADMIN_USER | sed 's/.*=//')

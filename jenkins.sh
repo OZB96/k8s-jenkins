@@ -5,8 +5,5 @@ source <(kubectl completion bash)
 kubectl apply -f jenkins.namespace.yaml
 kubectl apply -f jenkins.helm.yaml
 kubectl -n jenkins apply -f clusterRole.yaml
-WAIT=60
-echo "Sleeping for $WAIT"
-sleep $WAIT
 echo "Making progress"
 . query.sh

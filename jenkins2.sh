@@ -1,3 +1,4 @@
+#!/bin/bash
 source <(sudo k3s completion bash)
 source <(sudo kubectl completion bash)
 sudo kubectl apply -f jenkins.namespace.yaml

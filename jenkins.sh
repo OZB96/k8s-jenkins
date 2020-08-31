@@ -8,4 +8,5 @@ kubectl -n jenkins apply -f clusterRole.yaml
 sleep 60
 echo "Making progress"
 . query.sh
+kubectl -n jenkins apply -f service.yaml
 kubectl -n jenkins apply -f ingress.yaml

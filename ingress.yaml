@@ -9,7 +9,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /jenkins
+      - path: /
         backend:
           serviceName: jenkins
           servicePort: 8080

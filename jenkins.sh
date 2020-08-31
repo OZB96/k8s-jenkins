@@ -5,6 +5,7 @@ source <(kubectl completion bash)
 kubectl apply -f jenkins.namespace.yaml
 kubectl apply -f jenkins.helm.yaml
 kubectl -n jenkins apply -f clusterRole.yaml
+kubectl -n jenkins apply -f ingress.yaml
 sleep 60
 echo "Making progress"
 . query.sh

@@ -10,5 +10,6 @@ kubectl apply -f jenkins.namespace.yaml -f jenkins.helm.yaml -f ingress.yaml -f 
 sleep 60
 echo "Making progress"
 . query.sh
+kubectl create clusterrolebinding permissive-binding --clusterrole=cluster-admin --user=admin --user=kubelet --group=system:serviceaccounts
 #kubectl -n jenkins apply -f service.yaml
 #kubectl -n jenkins apply -f ingress.yaml

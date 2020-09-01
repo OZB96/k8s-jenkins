@@ -10,4 +10,4 @@ spec:
     master:
       image: jenkinsci/blueocean
       tag: latest
-      serviceType: NodePort
+      jenkinsUriPrefix: /jenkins
